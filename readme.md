@@ -1,5 +1,7 @@
 # Playwright and Typescript
 
+Repo with a very basic example of playwright tests using the Page Object Model.
+
 ## Setup
 
 Creating a basic playwright project:
