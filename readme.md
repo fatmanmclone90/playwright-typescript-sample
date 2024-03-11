@@ -40,6 +40,17 @@ Add `--fix` to auto-correct suggestions.
 
 ## To Do
 
-1. Delete test fails
-
 1. Convert from legacy eslint file to flat config
+
+1. Investigate the [Test Generator](https://playwright.dev/docs/codegen)
+
+1. Add a pipeline
+
+## Notebook
+
+Other commands I will forget:
+
+```
+npx playwright test --ui
+
+```
