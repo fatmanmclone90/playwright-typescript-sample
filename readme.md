@@ -44,7 +44,9 @@ Add `--fix` to auto-correct suggestions.
 
 1. Investigate the [Test Generator](https://playwright.dev/docs/codegen)
 
-1. Add a pipeline
+1. Get better test output in pipeline
+
+1. Fix deprication warnings in pipeline
 
 ## Notebook
 
