@@ -7,6 +7,7 @@ export class ToDoPage {
   readonly completedFilter: Locator;
   readonly activeFilter: Locator;
   readonly clearCompletedItemsButton: Locator;
+  private readonly DeleteButton: Locator
 
   constructor(page: Page) {
     this.page = page;
@@ -15,6 +16,7 @@ export class ToDoPage {
     this.completedFilter = page.getByRole('link', { name: 'Completed' });
     this.activeFilter = page.getByRole('link', { name: 'Active' });
     this.clearCompletedItemsButton = page.getByRole('button', { name: 'Clear Completed' });
+    this.DeleteButton = this.page.getByRole('button', { name: 'Delete' });
   }
 
   async goto() {
@@ -32,8 +34,7 @@ export class ToDoPage {
   async deleteToDo(text: string) {
     const item = await this.getToDo(text);
     await item.hover();
-    const button = await item.getByLabel('Delete');
-    await button.click();
+    await this.DeleteButton.click();
   }
 
   async getToDo(text: string): Promise<Locator> {

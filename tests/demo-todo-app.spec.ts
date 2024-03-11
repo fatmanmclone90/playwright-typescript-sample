@@ -18,7 +18,7 @@ test.describe('Todo', () => {
     await expect(toDoItems[0]).toHaveText([text]);
   });
 
-  test.skip('should allow me to delete items', async () => {
+  test('should allow me to delete items', async () => {
     const text = 'some text';
     const otherText = 'some other text';
     await toDoPage.createToDo([text, otherText]);
