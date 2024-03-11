@@ -33,7 +33,7 @@ jobs:
     - name: Run Tests
       run: npm test
       env:
-        PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml
+        PLAYWRIGHT_JUNIT_OUTPUT_NAME: results.xml
     - name: Test Summary
       uses: test-summary/action@v2
       with:
