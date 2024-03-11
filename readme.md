@@ -1,4 +1,8 @@
-# Setup
+# Playwright and Typescript
+
+## Setup
+
+Creating a basic playwright project:
 
 1. Install [nvm](https://github.com/coreybutler/nvm-windows#installation--upgrades)
 
@@ -14,16 +18,26 @@
 
 1. `npm init playwright@latest`
 
-# Testing Install
+## Testing the Install
 
 1. `npx playwright test`
 
 1. `npx playwright show-report`
 
+## Linting
 
-eslint commands
+`npx eslint .`
 
-prettier commands
+`npx prettier .`
 
-upgrade package commands
+Add `--fix` to auto-correct suggestions.
 
+## Checking for Updates
+
+`npx npm-check-updates`
+
+## To Do
+
+1. Delete test fails
+
+1. Convert from legacy eslint file to flat config
