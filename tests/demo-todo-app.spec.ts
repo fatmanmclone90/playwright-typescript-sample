@@ -10,12 +10,20 @@ test.beforeEach(async ({ page }) => {
 test.describe('Todo', () => {
   test('should allow me to add todo items', async () => {
     const text = 'some text';
+    
+    test.step('Given a user wants to create a to-do', () => {
+      // empty
+    });
 
-    await toDoPage.createToDo([text]);
+    await test.step('When the user presses enter', async () => {
+      await toDoPage.createToDo([text]);
+    });
 
-    const toDoItems = await toDoPage.getAllToDos();
-    await expect(toDoItems).toHaveLength(1);
-    await expect(toDoItems[0]).toHaveText([text]);
+    await test.step('Then the to-do is added to the list', async () => {
+      const toDoItems = await toDoPage.getAllToDos();
+      await expect(toDoItems).toHaveLength(1);
+      await expect(toDoItems[0]).toHaveText([text]);
+    });
   });
 
   test('should allow me to delete items', async () => {
