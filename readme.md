@@ -19,3 +19,11 @@
 1. `npx playwright test`
 
 1. `npx playwright show-report`
+
+
+eslint commands
+
+prettier commands
+
+upgrade package commands
+
