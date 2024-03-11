@@ -54,4 +54,6 @@ Other commands I will forget:
 npx playwright test --ui
 
 npx playwright install --with-deps
+
+set PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml && npx playwright test --reporter=junit
 ```
