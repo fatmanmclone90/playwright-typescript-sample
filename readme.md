@@ -46,13 +46,15 @@ Add `--fix` to auto-correct suggestions.
 
 1. Get better test output in pipeline
 
-1. Fix deprication warnings in pipeline
+1. Fix deprecation warnings in pipeline
+
+1. Consider Allure reporting
 
 ## Notebook
 
 Other commands I will forget:
 
-```
+``` cmd
 npx playwright test --ui
 
 npx playwright install --with-deps
