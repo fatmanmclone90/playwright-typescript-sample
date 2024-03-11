@@ -40,7 +40,7 @@ Add `--fix` to auto-correct suggestions.
 
 ## To Do
 
-1. Convert from legacy eslint file to flat config
+1. Convert from legacy eslint file to flat config.  Eslint rules taken from [here](https://github.com/elaichenkov/playwright-example-recipes/blob/main/.gitignore)
 
 1. Investigate the [Test Generator](https://playwright.dev/docs/codegen)
 
@@ -53,4 +53,5 @@ Other commands I will forget:
 ```
 npx playwright test --ui
 
+npx playwright install --with-deps
 ```
