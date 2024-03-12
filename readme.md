@@ -28,9 +28,9 @@ Creating a basic playwright project:
 
 ## Linting
 
-`npx eslint .`
+`npx eslint .` or `npx eslint . --fix`
 
-`npx prettier .`
+`npx prettier . --check` or `npx prettier . --write`
 
 Add `--fix` to auto-correct suggestions.
 

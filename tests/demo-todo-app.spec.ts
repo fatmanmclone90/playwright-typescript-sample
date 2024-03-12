@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 test.describe('Todo', () => {
   test('should allow me to add todo items', async () => {
     const text = 'some text';
-    
+
     test.step('Given a user wants to create a to-do', () => {
       // empty
     });

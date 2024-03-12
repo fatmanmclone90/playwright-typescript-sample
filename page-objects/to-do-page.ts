@@ -7,7 +7,7 @@ export class ToDoPage {
   readonly completedFilter: Locator;
   readonly activeFilter: Locator;
   readonly clearCompletedItemsButton: Locator;
-  private readonly DeleteButton: Locator
+  private readonly DeleteButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
