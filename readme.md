@@ -57,6 +57,8 @@ To force an update of snapshots
 
 1. Consider Allure reporting
 
+1. Figure out how to update snapshots in a Github Action.  [Example](https://mmazzarolo.com/blog/2022-09-09-visual-regression-testing-with-playwright-and-github-actions/).
+
 ## Notebook
 
 Other commands I will forget:
