@@ -1,6 +1,7 @@
 # Playwright and Typescript
 
-Repo with a very basic example of playwright tests using the Page Object Model.
+- Very basic example of playwright tests using the Page Object Model.
+- Example of Visual Regression Testing using Playwright
 
 ## Setup
 
@@ -32,11 +33,19 @@ Creating a basic playwright project:
 
 `npx prettier . --check` or `npx prettier . --write`
 
-Add `--fix` to auto-correct suggestions.
-
 ## Checking for Updates
 
 `npx npm-check-updates`
+
+## Visual Testing
+
+To execute Visual Regression Tests
+
+`npx playwright test --grep @visual`
+
+To force an update of snapshots
+
+`npx playwright test --update-snapshots`
 
 ## To Do
 
@@ -45,8 +54,6 @@ Add `--fix` to auto-correct suggestions.
 1. Investigate the [Test Generator](https://playwright.dev/docs/codegen)
 
 1. Get better test output in pipeline
-
-1. Fix deprecation warnings in pipeline
 
 1. Consider Allure reporting
 
@@ -59,5 +66,5 @@ npx playwright test --ui
 
 npx playwright install --with-deps
 
-set PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml && npx playwright test --reporter=junit
+set PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml && npx playwright test --reporter=junit # Seems to cause issue with filename containing exrta space
 ```

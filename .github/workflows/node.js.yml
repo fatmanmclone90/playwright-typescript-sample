@@ -34,10 +34,16 @@ jobs:
       run: npm test
       env:
         PLAYWRIGHT_JUNIT_OUTPUT_NAME: results.xml
+    - name: Run Visual Regression Tests
+      run: npm test:visual
+      env:
+        PLAYWRIGHT_JUNIT_OUTPUT_NAME: visual-results.xml
     - name: Test Summary
       uses: test-summary/action@v2
       with:
-        paths: "results.xml"
+        paths: |
+          "results.xml"
+          "visual-results.xml"
       if: always()
     - uses: actions/upload-artifact@v4
       name: Upload HTML report
@@ -47,9 +53,16 @@ jobs:
         path: playwright-report/
         retention-days: 5
     - uses: actions/upload-artifact@v4
-      name: Upload JUNIT report
+      name: Upload JUNIT Report
       if: always()
       with:
         name: results
         path: results.xml
+        retention-days: 5
+    - uses: actions/upload-artifact@v4
+      name: Upload JUNIT Visual Regression Test Report
+      if: always()
+      with:
+        name: visual-results
+        path: visual-results.xml
         retention-days: 5

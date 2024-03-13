@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test --grep-invert @visual",
+    "test:visual": "npx playwright test --grep @visual"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chris Tamlyn",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
