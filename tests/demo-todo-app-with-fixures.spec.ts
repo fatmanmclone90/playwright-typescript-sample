@@ -1,14 +1,8 @@
-import { test, expect } from '@playwright/test';
-import { ToDoPage } from '../page-objects/to-do-page';
+import { expect } from '@playwright/test';
+import { test } from '../fixtures/fixtures';
 
-let toDoPage: ToDoPage;
-test.beforeEach(async ({ page }) => {
-  toDoPage = new ToDoPage(page);
-  await toDoPage.goto();
-});
-
-test.describe('Todo', { tag: '@pom' }, () => {
-  test('should allow me to add todo items', async () => {
+test.describe('Todo', { tag: '@withFixtures' }, () => {
+  test('should allow me to add todo items', async ({ toDoPage }) => {
     const text = 'some text';
 
     await test.step('Given a user wants to create a to-do', () => {
@@ -26,7 +20,7 @@ test.describe('Todo', { tag: '@pom' }, () => {
     });
   });
 
-  test('should allow me to delete items', async () => {
+  test('should allow me to delete items', async ({ toDoPage }) => {
     const text = 'some text';
     const otherText = 'some other text';
     await toDoPage.createToDo([text, otherText]);
@@ -38,7 +32,7 @@ test.describe('Todo', { tag: '@pom' }, () => {
     await expect(toDoItems[0]).toHaveText([otherText]);
   });
 
-  test('should allow me to complete an item', async () => {
+  test('should allow me to complete an item', async ({ toDoPage }) => {
     const text = 'some text';
     const otherText = 'some other text';
     await toDoPage.createToDo([text, otherText]);
@@ -49,7 +43,7 @@ test.describe('Todo', { tag: '@pom' }, () => {
     await expect(item).toHaveClass('completed');
   });
 
-  test('filter only completed items', async () => {
+  test('filter only completed items', async ({ toDoPage }) => {
     const text = 'some text';
     const otherText = 'some other text';
     await toDoPage.createToDo([text, otherText]);
@@ -62,7 +56,7 @@ test.describe('Todo', { tag: '@pom' }, () => {
     await expect(toDoItems[0]).toHaveText([text]);
   });
 
-  test('filter only active items', async () => {
+  test('filter only active items', async ({ toDoPage }) => {
     const text = 'some text';
     const otherText = 'some other text';
     await toDoPage.createToDo([text, otherText]);
@@ -75,7 +69,7 @@ test.describe('Todo', { tag: '@pom' }, () => {
     await expect(toDoItems[0]).toHaveText([otherText]);
   });
 
-  test('clear completed items', async () => {
+  test('clear completed items', async ({ toDoPage }) => {
     const text = 'some text';
     const otherText = 'some other text';
     await toDoPage.createToDo([text, otherText]);

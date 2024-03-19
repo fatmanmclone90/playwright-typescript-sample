@@ -1,7 +1,9 @@
 # Playwright and Typescript
 
 - Very basic example of playwright tests using the Page Object Model.
-- Example of Visual Regression Testing using Playwright
+  - [Implementation](/tests//demo-todo-app.spec.ts) of POM using beforeEach
+  - [Implementation](/tests/demo-todo-app-with-fixures.spec.ts) of POM using custom [fixtures](https://playwright.dev/docs/auth#testing-multiple-roles-with-pom-fixtures), using example from Playwright
+- [Example](/tests/demo-todo-app.spec.ts) of Visual Regression Testing using Playwright
 
 ## Setup
 
@@ -53,6 +55,8 @@ To force an update of snapshots
 
 1. Investigate the [Test Generator](https://playwright.dev/docs/codegen)
 
+1. Add sample test [setup](https://playwright.dev/docs/auth#basic-shared-account-in-all-tests)
+
 1. Get better test output in pipeline
 
 1. Consider Allure reporting
@@ -69,4 +73,6 @@ npx playwright test --ui
 npx playwright install --with-deps
 
 set PLAYWRIGHT_JUNIT_OUTPUT_NAME=results.xml && npx playwright test --reporter=junit # Seems to cause issue with filename containing exrta space
+
+npx playwright test --grep-invert @visual
 ```

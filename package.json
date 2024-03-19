@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test --grep-invert @visual",
-    "test:visual": "npx playwright test --grep @visual"
+    "test": "npx playwright test --grep @pom",
+    "test:fixtures": "npx playwright test --grep @withFixtures",
+    "test:visual": "npx playwright test --grep @visual",
+    "lint": "npx prettier . --write && npx npx eslint . --fix"
   },
   "keywords": [],
   "author": "Chris Tamlyn",
