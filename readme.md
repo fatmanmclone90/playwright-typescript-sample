@@ -53,10 +53,6 @@ To force an update of snapshots
 
 1. Convert from legacy eslint file to flat config.  Eslint rules taken from [here](https://github.com/elaichenkov/playwright-example-recipes/blob/main/.gitignore)
 
-1. Investigate the [Test Generator](https://playwright.dev/docs/codegen)
-
-1. Add sample test [setup](https://playwright.dev/docs/auth#basic-shared-account-in-all-tests)
-
 1. Get better test output in pipeline
 
 1. Consider Allure reporting
